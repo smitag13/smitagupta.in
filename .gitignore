@@ -1,0 +1,11 @@
+# Local service/auth/cache folders
+.netlify/
+.home/
+.npm-cache/
+
+# Generated deploy artifacts
+deploy-site/
+*.zip
+
+# macOS
+.DS_Store
