@@ -424,8 +424,11 @@ h1 {
   position: fixed;
   inset: 0;
   z-index: 30;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   overflow: auto;
-  padding: clamp(1rem, 3vw, 2rem);
+  padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem);
   background:
     linear-gradient(rgba(7, 58, 134, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(7, 58, 134, 0.025) 1px, transparent 1px),
@@ -438,10 +441,13 @@ h1 {
 }
 
 .gallery-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 9rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   gap: clamp(1rem, 2vw, 1.6rem);
-  min-height: calc(100vh - clamp(2rem, 6vw, 4rem));
+  width: 100%;
+  max-width: 900px;
+  padding-right: 9rem;
 }
 
 .gallery-close {
@@ -460,20 +466,21 @@ h1 {
 }
 
 .gallery-stage {
-  display: grid;
-  align-content: center;
-  gap: 0.7rem;
-  padding-right: clamp(2.5rem, 5vw, 4rem);
+  display: table;
+  max-width: 100%;
 }
 
 .gallery-stage img {
+  display: block;
   max-width: 100%;
   max-height: 78vh;
   object-fit: contain;
-  background: var(--paper-deep);
 }
 
 .gallery-stage p {
+  display: table-caption;
+  caption-side: bottom;
+  margin-top: 0.7rem;
   margin-bottom: 0;
   color: rgba(4, 4, 4, 0.7);
   font-size: 0.88rem;
@@ -482,9 +489,15 @@ h1 {
 }
 
 .gallery-thumbs {
-  display: grid;
-  align-content: center;
+  position: fixed;
+  top: clamp(3rem, 6vw, 5rem);
+  right: clamp(1rem, 3vw, 2rem);
+  width: 7rem;
+  display: flex;
+  flex-direction: column;
   gap: 0.7rem;
+  max-height: 78vh;
+  overflow-y: auto;
 }
 
 .gallery-thumbs button {
