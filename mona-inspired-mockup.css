@@ -441,7 +441,6 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 9rem;
   gap: clamp(1rem, 2vw, 1.6rem);
-  min-height: calc(100vh - clamp(2rem, 6vw, 4rem));
 }
 
 .gallery-close {
@@ -461,7 +460,7 @@ h1 {
 
 .gallery-stage {
   display: grid;
-  align-content: center;
+  align-content: start;
   gap: 0.7rem;
   padding-right: clamp(2.5rem, 5vw, 4rem);
 }
@@ -483,7 +482,7 @@ h1 {
 
 .gallery-thumbs {
   display: grid;
-  align-content: center;
+  align-content: start;
   gap: 0.7rem;
 }
 
