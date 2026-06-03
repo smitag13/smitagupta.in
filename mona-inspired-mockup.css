@@ -484,6 +484,8 @@ h1 {
   display: grid;
   align-content: start;
   gap: 0.7rem;
+  max-height: 78vh;
+  overflow-y: auto;
 }
 
 .gallery-thumbs button {
