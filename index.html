@@ -1,137 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Smita Gupta is an advocate, legal technologist, and Process Architect working across AI, law, justice, and public-interest technology.">
-    <title>Smita Gupta</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2">
-  </head>
-  <body>
-    <header class="site-header" data-header>
-      <nav aria-label="Site navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#photos">Photos</a>
-        <a href="#writing">Writing</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="menu-toggle" type="button" data-menu-toggle aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-      </button>
-    </header>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smita Gupta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <nav class="mobile-nav" data-mobile-nav aria-label="Mobile site navigation">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#photos">Photos</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<header>
+  <nav id="desktop-nav" aria-label="Site navigation">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#photos">Photos</a>
+    <a href="#writing">Writing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span class="bars"><span class="top"></span><span class="bottom"></span></span>
+  </button>
+</header>
 
-    <main id="top">
-      <section class="hero" id="about">
-        <div class="hero-copy">
-          <h1>Smita Gupta</h1>
-          <div class="hero-bio">
-            <p>Smita is an advocate, legal technologist, and Process Architect at jhana.ai.</p>
-            <p>She uncovers the hidden logic of the judiciary: the messy, unwritten ways courts actually work, and turns them into clear technical roadmaps for AI.</p>
-            <p>She previously co-led OpenNyAI at Agami, building communities and Digital Public Goods at the intersection of AI, the judiciary, and law.</p>
-            <p>Awarded a scholarship by the Australian Government for a course on Executive Leadership at the University of Queensland. TA 101 Certified.<br>Ex-NLS Punjab.</p>
-          </div>
-        </div>
-        <figure class="portrait">
-          <img src="assets/smita-field-hero.png" alt="Smita Gupta working with people in the field">
-        </figure>
-        <div class="mark-strip" aria-label="Focus areas">
-          <span>process architecture</span>
-          <span class="divider"></span>
-          <span>open AI public goods</span>
-          <span class="divider"></span>
-          <span>justice-sector convening</span>
-        </div>
-      </section>
+<nav id="mobile-nav" aria-label="Mobile site navigation">
+  <a href="#about">About</a>
+  <a href="#work">Work</a>
+  <a href="#photos">Photos</a>
+  <a href="#writing">Writing</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-      <section class="work" id="work">
-        <div class="section-title"><span class="label">Work</span></div>
-        <div class="work-list">
-          <div class="work-row">
-            <div class="work-logo-slot"><a href="https://jhana.ai/" target="_blank" rel="noopener"><img src="assets/logo-jhana.png" alt="jhana.ai"></a></div>
-            <div><div class="work-role">Director, GovTech and Public Sector</div><p>Deployed applied AI across courts, delivering 30× faster filing scrutiny at Egmore Commercial Court and 15-minute judicial dashboards at Karnataka High Court. Led business process reengineering (BPR) at Sikkim and Gujarat High Courts as Technical Product Manager.</p></div>
-          </div>
-          <div class="work-row">
-            <div class="work-logo-slot"><a href="https://www.agami.in/" target="_blank" rel="noopener"><img src="assets/logo-agami.png" alt="Agami"></a></div>
-            <div><div class="work-role">Curator</div><p>Built India's largest Legal AI innovator community through events like OpenNyAI Labs and the AI Maker Residency, where issues like Grievance Redressal, and AI application inside courtrooms were built for.</p></div>
-          </div>
-          <div class="work-row">
-            <div class="work-logo-slot"><a href="https://opennyai.org/" target="_blank" rel="noopener"><img src="assets/logo-opennyai.png" alt="OpenNyAI"></a></div>
-            <div><div class="work-role">Co-Lead</div><p>Co-led development of reference AI solutions and open-source legal NLP models, including JIVA, a judges' assistant that increased daily case throughput by 30%, and a SemEval 2023 benchmark-setting model built with Thoughtworks.</p></div>
-          </div>
-          <div class="work-row">
-            <div class="work-logo-slot"><a href="https://opennyai.org/dpg/jugalbandi" target="_blank" rel="noopener"><img src="assets/logo-jugalbandi.png" alt="Jugalbandi"></a></div>
-            <div><div class="work-role">Co-Lead</div><p>Launched in December 2022, Jugalbandi was the first GenAI application to offer a voice-to-voice interface in Indian languages for accessing legal information and government scheme details. The partnership led to a multi-year collaboration with Microsoft and was featured in Satya Nadella's keynote at Microsoft Build.</p></div>
-          </div>
-        </div>
-      </section>
+<main id="top">
 
-      <section class="photos" id="photos" aria-labelledby="photos-title">
-        <div class="section-title"><span class="label" id="photos-title">On the Field</span></div>
+  <section id="about" data-screen-label="Hero">
+    <div class="intro">
+      <h1>Smita Gupta</h1>
+      <div class="copy">
+        <p>Smita is an advocate, legal technologist, and Process Architect at jhana.ai.</p>
+        <p>She uncovers the hidden logic of the judiciary: the messy, unwritten ways courts actually work, and turns them into clear technical roadmaps for AI.</p>
+        <p>Previously co-led OpenNyAI at Agami, building communities and Digital Public Goods at the intersection of AI, the judiciary, and law.</p>
+        <p>Awarded a scholarship by the Australian Government for a course on Executive Leadership at the University of Queensland. TA 101 Certified.<br>Ex-NLS Punjab.</p>
+      </div>
+    </div>
+    <figure>
+      <img src="smita-field-hero.png" alt="Smita Gupta working with people in the field" loading="lazy">
+    </figure>
+    <div id="focus-areas" aria-label="Focus areas">
+      <span class="item">process architecture</span>
+      <span class="sep"></span>
+      <span class="item">open AI public goods</span>
+      <span class="sep"></span>
+      <span class="item">justice-sector convening</span>
+    </div>
+  </section>
 
-        <div class="photo-desktop" data-photo-desktop>
-          <div class="hero-frame">
-            <img data-hero-img src="" alt="">
-            <button class="hero-nav hero-nav-prev" type="button" data-hero-prev aria-label="Previous photo">‹</button>
-            <button class="hero-nav hero-nav-next" type="button" data-hero-next aria-label="Next photo">›</button>
-          </div>
-          <p class="hero-caption" data-hero-caption></p>
-          <div class="thumb-row" data-thumb-row></div>
-        </div>
+  <section id="work" data-screen-label="Work">
+    <div class="section-label"><span>Work</span></div>
+    <div id="work-list"></div>
+  </section>
 
-        <div class="photo-mobile" data-photo-mobile>
-          <div class="story-dots" data-story-dots></div>
-          <img data-story-img src="" alt="">
-          <div class="story-scrim"></div>
-          <button class="story-zone story-zone-prev" type="button" data-story-prev aria-label="Previous photo"></button>
-          <button class="story-zone story-zone-next" type="button" data-story-next aria-label="Next photo"></button>
-          <p class="story-caption" data-story-caption></p>
-        </div>
-      </section>
+  <section id="photos" aria-labelledby="photos-title" data-screen-label="Photos">
+    <div class="section-label"><span id="photos-title">On the Field</span></div>
 
-      <section class="writing" id="writing">
-        <div class="section-title">
-          <div class="filters">
-            <button class="filter-chip" type="button" data-filter="writing">Publications</button>
-            <button class="filter-chip" type="button" data-filter="talks">Talks &amp; Training</button>
-            <button class="filter-chip" type="button" data-filter="recognition">Recognition</button>
-          </div>
-        </div>
-        <div class="list" data-writing-list>
-          <div class="list-row" data-entry-type="writing"><span class="tag">Chapter — </span><a href="https://www.linkedin.com/posts/smita-gupta13_responsible-ugcPost-7205962993363300352-t8m2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB32lcYBvIvuyqMJnvCQ1T500lMiWFspdvY" target="_blank" rel="noopener">Contributed a chapter to 'Technological Innovations in Law' - a book organised by Judge Anderson de Paiva Gabriel of the Court of Justice of Rio de Janeiro, Brazil.</a></div>
-          <div class="list-row" data-entry-type="talks"><span class="tag">Training — </span><a href="https://www.linkedin.com/posts/smita-gupta13_i-am-rejuvenated-after-todays-session-and-ugcPost-7259951203831160832-1lo7/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB32lcYBvIvuyqMJnvCQ1T500lMiWFspdvY" target="_blank" rel="noopener">Trained judges from across India, Bhutan, Maldives, Nepal and Sri Lanka on AI DPGs and DPIs in Judiciary, in collaboration with UNESCO and CCG NLUD.</a></div>
-          <div class="list-row" data-entry-type="writing"><span class="tag">Essay — </span><a href="https://medium.com/change-maker/why-we-need-more-social-entrepreneurs-shaping-ai-d50a330fd3eb" target="_blank" rel="noopener">H Baruchel &amp; S Gupta, 'Why We Need More Social Entrepreneurs Shaping AI', Ashoka Medium, 2024.</a></div>
-          <div class="list-row" data-entry-type="talks"><span class="tag">Guest lecture — </span>Delivered a guest lecture to LLB and LLM students at the National Law School of India University, Bengaluru, as part of an elective course on "AI, Ethics &amp; Law".</div>
-          <div class="list-row" data-entry-type="talks"><span class="tag">Training — </span><a href="https://www.linkedin.com/posts/smita-gupta13_excited-to-share-that-i-had-the-distinct-ugcPost-7129378696943050752-1arf/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB32lcYBvIvuyqMJnvCQ1T500lMiWFspdvY" target="_blank" rel="noopener">Conducted a training session on Leveraging AI for Justice for 200+ Indian Administrative Service officers, 2023.</a></div>
-          <div class="list-row" data-entry-type="talks"><span class="tag">Presentation — </span>Presented Jugalbandi at the G20 Summit, September 2023, to heads of state, foreign and Indian ministerial delegates, and 50+ foreign and Indian media houses.</div>
-          <div class="list-row" data-entry-type="writing"><span class="tag">Essay — </span><a href="https://www.orfonline.org/public/uploads/posts/pdf/20230424101500.pdf" target="_blank" rel="noopener">S Gupta, S Karn (2022), "Open AI for Justice", Digital Debates: Observer Research Foundation CyFy Journal.</a></div>
-          <div class="list-row" data-entry-type="writing"><span class="tag">Research — </span><a href="https://arxiv.org/abs/2211.03442" target="_blank" rel="noopener">P Kalamkar, S Gupta et al. (2022), "Named Entity Recognition in Indian Court Judgments".</a></div>
-          <div class="list-row" data-entry-type="writing"><span class="tag">Conference — </span><a href="https://arxiv.org/abs/2201.13125" target="_blank" rel="noopener">Tiwari, S Gupta et al. (2022), "Corpus for Automatic Structuring of Legal Documents", LREC Conference.</a></div>
-          <div class="list-row" data-entry-type="writing"><span class="tag">Article — </span><a href="https://scroll.in/article/1033443/who-gets-to-be-a-high-court-chief-justice-in-india" target="_blank" rel="noopener">Rangin Tripathy, Smita Gupta, et al. (2022), "Who Gets to be a High Court Chief Justice in India?", Scroll.in.</a></div>
-          <div class="list-row" data-entry-type="talks"><span class="tag">Conference — </span><a href="https://www.linkedin.com/posts/smita-gupta13_ai-law-digitalpublicgoods-share-6980833030223384576-TqKa/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB32lcYBvIvuyqMJnvCQ1T500lMiWFspdvY" target="_blank" rel="noopener">Presented at the 3rd Artificial Intelligence for Information Accessibility Conference, hosted by UNESCO, 2022.</a></div>
-          <div class="list-row" data-entry-type="recognition"><span class="tag">Forum — </span>Represented India at the QUAD Critical and Emerging Technologies Forum, Japan, August 2024.</div>
-          <div class="list-row" data-entry-type="recognition"><span class="tag">Network — </span>Ambassador of the Global Acceptance Network / Ayra, 2024-present.</div>
-          <div class="list-row" data-entry-type="recognition"><span class="tag">Agamishaala — </span>Selected as the youngest participant at Agamishaala 2022, a justice leadership program with former judges, bureaucrats, professors, lawyers, and entrepreneurs.</div>
-        </div>
-      </section>
+    <div id="gallery-desktop">
+      <div class="frame">
+        <img id="main-photo" src="" alt="">
+        <div class="shade"></div>
+        <button type="button" class="photo-nav-btn prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="photo-nav-btn next" aria-label="Next photo">›</button>
+        <p class="caption" id="main-caption"></p>
+      </div>
+      <div id="thumbs"></div>
+    </div>
 
-      <section class="contact" id="contact" aria-label="Contact">
-        <a class="contact-email" href="mailto:guptasmita13@gmail.com">Email</a>
-        <span class="contact-divider" aria-hidden="true">|</span>
-        <a class="contact-link" href="https://in.linkedin.com/in/smita-gupta13">LinkedIn</a>
-      </section>
-    </main>
-    <script src="script.js?v=2"></script>
-  </body>
+    <div id="gallery-mobile">
+      <div class="dots" id="mobile-dots"></div>
+      <img id="mobile-photo" src="" alt="">
+      <div class="shade"></div>
+      <button type="button" class="tap-zone prev" aria-label="Previous photo"></button>
+      <button type="button" class="tap-zone next" aria-label="Next photo"></button>
+      <p class="caption" id="mobile-caption"></p>
+    </div>
+  </section>
+
+  <section id="writing" data-screen-label="Writing">
+    <div class="section-label">
+      <div id="filters"></div>
+    </div>
+    <div id="writing-list"></div>
+  </section>
+
+  <section id="contact" aria-label="Contact">
+    <div class="inner">
+      <span class="label">Get in Touch</span>
+      <form id="contact-form">
+        <input type="text" id="form-name" required placeholder="Name">
+        <input type="email" id="form-email" required placeholder="Email">
+        <textarea id="form-message" required placeholder="Message" rows="4"></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="contact-thanks">Thanks — your message is on its way. I'll get back to you soon.</p>
+      <a class="linkedin" href="https://in.linkedin.com/in/smita-gupta13" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
 </html>
