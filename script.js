@@ -44,11 +44,11 @@ const ENTRIES = [
   { tag: "Agamishaala", text: "Selected as the youngest participant at Agamishaala 2022, a justice leadership program with former judges, bureaucrats, professors, lawyers, and entrepreneurs.", type: "recognition" },
 ];
 
-const FILTER_LABELS = { all: "All", writing: "Publications", talks: "Talks & Training", recognition: "Recognition" };
+const FILTER_LABELS = { writing: "Publications", talks: "Talks & Training", recognition: "Recognition" };
 
 let activeIndex = 0;
 let hoverLocked = false;
-let writingFilter = "all";
+let writingFilter = null;
 
 function renderWork() {
   const list = document.getElementById("work-list");
@@ -100,15 +100,29 @@ function prevPhoto() { activeIndex = (activeIndex - 1 + PHOTOS.length) % PHOTOS.
 
 function renderWriting() {
   const filters = document.getElementById("filters");
-  filters.innerHTML = ["writing", "talks", "recognition"].map(f =>
-    `<button type="button" data-f="${f}" class="${writingFilter === f ? "active" : ""}">${FILTER_LABELS[f]}</button>`
-  ).join("");
+  if (!filters.children.length) {
+    filters.innerHTML = ["writing", "talks", "recognition"].map(f =>
+      `<button type="button" id="filter-${f}" data-f="${f}" aria-controls="writing-list" aria-expanded="false">${FILTER_LABELS[f]}</button>`
+    ).join("");
+    filters.querySelectorAll("button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        writingFilter = writingFilter === btn.dataset.f ? null : btn.dataset.f;
+        renderWriting();
+      });
+    });
+  }
   filters.querySelectorAll("button").forEach(btn => {
-    btn.addEventListener("click", () => { writingFilter = btn.dataset.f; renderWriting(); });
+    const expanded = writingFilter === btn.dataset.f;
+    btn.classList.toggle("active", expanded);
+    btn.setAttribute("aria-expanded", String(expanded));
   });
 
-  const filtered = writingFilter === "all" ? ENTRIES : ENTRIES.filter(e => e.type === writingFilter);
-  document.getElementById("writing-list").innerHTML = filtered.map(e => `
+  const list = document.getElementById("writing-list");
+  list.hidden = writingFilter === null;
+  if (writingFilter) list.setAttribute("aria-labelledby", `filter-${writingFilter}`);
+  else list.removeAttribute("aria-labelledby");
+  const filtered = ENTRIES.filter(e => e.type === writingFilter);
+  list.innerHTML = filtered.map(e => `
     <div class="entry">
       <span class="tag">${e.tag} — </span>
       ${e.href ? `<a href="${e.href}" target="_blank" rel="noopener">${e.text}</a>` : e.text}
