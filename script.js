@@ -27,6 +27,7 @@ const WORK_ITEMS = [
 ];
 
 const ENTRIES = [
+  { tag: "Article", text: "Sachin Malhan, Varun Hemachandran & Smita Gupta (2025), 'How AI is Transforming Access to Justice in India', NLSIR Online.", type: "writing", href: "https://forum.nls.ac.in/nlsir-online-blog/how-ai-is-transforming-access-to-justice-in-india/" },
   { tag: "Chapter", text: "Contributed a chapter to 'Technological Innovations in Law' - a book organised by Judge Anderson de Paiva Gabriel of the Court of Justice of Rio de Janeiro, Brazil.", type: "writing", href: "https://www.linkedin.com/posts/smita-gupta13_responsible-ugcPost-7205962993363300352-t8m2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB32lcYBvIvuyqMJnvCQ1T500lMiWFspdvY" },
   { tag: "Training", text: "Trained judges from across India, Bhutan, Maldives, Nepal and Sri Lanka on AI DPGs and DPIs in Judiciary, in collaboration with UNESCO and CCG NLUD.", type: "talks", href: "https://www.linkedin.com/posts/smita-gupta13_i-am-rejuvenated-after-todays-session-and-ugcPost-7259951203831160832-1lo7/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB32lcYBvIvuyqMJnvCQ1T500lMiWFspdvY" },
   { tag: "Essay", text: "H Baruchel & S Gupta, 'Why We Need More Social Entrepreneurs Shaping AI', Ashoka Medium, 2024.", type: "writing", href: "https://medium.com/change-maker/why-we-need-more-social-entrepreneurs-shaping-ai-d50a330fd3eb" },
@@ -130,19 +131,6 @@ document.querySelectorAll(".photo-nav-btn.next, #gallery-mobile .tap-zone.next")
 window.addEventListener("keydown", e => {
   if (e.key === "ArrowRight") { nextPhoto(); hoverLocked = true; }
   if (e.key === "ArrowLeft") { prevPhoto(); hoverLocked = true; }
-});
-
-document.getElementById("contact-form").addEventListener("submit", e => {
-  e.preventDefault();
-  const name = document.getElementById("form-name").value;
-  const email = document.getElementById("form-email").value;
-  const message = document.getElementById("form-message").value;
-  const to = ["gupta", "smita13"].join("") + "@" + ["gmail", "com"].join(".");
-  const subject = encodeURIComponent("Portfolio contact from " + name);
-  const body = encodeURIComponent(message + "\n\n— " + name + " (" + email + ")");
-  window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
-  document.getElementById("contact-form").style.display = "none";
-  document.getElementById("contact-thanks").style.display = "block";
 });
 
 renderWork();
