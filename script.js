@@ -44,11 +44,10 @@ const ENTRIES = [
   { tag: "Agamishaala", text: "Selected as the youngest participant at Agamishaala 2022, a justice leadership program with former judges, bureaucrats, professors, lawyers, and entrepreneurs.", type: "recognition" },
 ];
 
-const FILTER_LABELS = { writing: "Publications", talks: "Talks & Training", recognition: "Recognition" };
+const WRITING_LABELS = { writing: "Writing", talks: "Talks & Training", recognition: "Recognition" };
 
 let activeIndex = 0;
 let hoverLocked = false;
-let writingFilter = null;
 
 function renderWork() {
   const list = document.getElementById("work-list");
@@ -99,34 +98,20 @@ function nextPhoto() { activeIndex = (activeIndex + 1) % PHOTOS.length; renderGa
 function prevPhoto() { activeIndex = (activeIndex - 1 + PHOTOS.length) % PHOTOS.length; renderGallery(); }
 
 function renderWriting() {
-  const filters = document.getElementById("filters");
-  if (!filters.children.length) {
-    filters.innerHTML = ["writing", "talks", "recognition"].map(f =>
-      `<button type="button" id="filter-${f}" data-f="${f}" aria-controls="writing-list" aria-expanded="false">${FILTER_LABELS[f]}</button>`
-    ).join("");
-    filters.querySelectorAll("button").forEach(btn => {
-      btn.addEventListener("click", () => {
-        writingFilter = writingFilter === btn.dataset.f ? null : btn.dataset.f;
-        renderWriting();
-      });
-    });
-  }
-  filters.querySelectorAll("button").forEach(btn => {
-    const expanded = writingFilter === btn.dataset.f;
-    btn.classList.toggle("active", expanded);
-    btn.setAttribute("aria-expanded", String(expanded));
-  });
-
   const list = document.getElementById("writing-list");
-  list.hidden = writingFilter === null;
-  if (writingFilter) list.setAttribute("aria-labelledby", `filter-${writingFilter}`);
-  else list.removeAttribute("aria-labelledby");
-  const filtered = ENTRIES.filter(e => e.type === writingFilter);
-  list.innerHTML = filtered.map(e => `
-    <div class="entry">
-      <span class="tag">${e.tag} — </span>
-      ${e.href ? `<a href="${e.href}" target="_blank" rel="noopener">${e.text}</a>` : e.text}
-    </div>
+  list.innerHTML = ["writing", "talks", "recognition"].map(type => `
+    <details class="writing-row" name="writing-categories">
+      <summary>${WRITING_LABELS[type]}</summary>
+      <div class="writing-content">
+        ${type === "writing" ? '<a class="medium-blog" href="https://medium.com/@guptasmita13" target="_blank" rel="noopener">Read my blog on Medium</a>' : ""}
+        ${ENTRIES.filter(entry => entry.type === type).map(entry => `
+          <div class="entry">
+            <span class="tag">${entry.tag} — </span>
+            ${entry.href ? `<a href="${entry.href}" target="_blank" rel="noopener">${entry.text}</a>` : entry.text}
+          </div>
+        `).join("")}
+      </div>
+    </details>
   `).join("");
 }
 
